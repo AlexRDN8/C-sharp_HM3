@@ -37,7 +37,7 @@ int CheckOfPalindrome(int N)
         result = result + (remainder * (int)Math.Pow(10, limit - count));       
         count ++;
     }
-    result = result + N / (int)Math.Pow(10, limit-1); 
+    result = result + N / (int)Math.Pow(10, limit-1); // к этой хитрости пришлось прибегнуть, так как остаток от деления на 10 последнего числа всегда получался 0, так как последнее остающееся число < 10. 
     return result; 
 }
 
